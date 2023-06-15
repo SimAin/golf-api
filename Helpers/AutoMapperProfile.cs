@@ -2,17 +2,17 @@ namespace WebApi.Helpers;
 
 using AutoMapper;
 using WebApi.Entities;
-using WebApi.Models.Users;
+using WebApi.Models.Players;
 
 public class AutoMapperProfile : Profile
 {
     public AutoMapperProfile()
     {
-        // CreateRequest -> User
-        CreateMap<CreateRequest, User>();
+        // CreateRequest -> Player
+        CreateMap<CreateRequest, Player>();
 
-        // UpdateRequest -> User
-        CreateMap<UpdateRequest, User>()
+        // UpdateRequest -> Player
+        CreateMap<UpdateRequest, Player>()
             .ForAllMembers(x => x.Condition(
                 (src, dest, prop) =>
                 {

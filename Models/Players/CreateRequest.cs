@@ -1,4 +1,4 @@
-namespace WebApi.Models.Users;
+namespace WebApi.Models.Players;
 
 using System.ComponentModel.DataAnnotations;
 using WebApi.Entities;

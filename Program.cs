@@ -16,13 +16,15 @@ var builder = WebApplication.CreateBuilder(args);
         // serialize enums as strings in api responses (e.g. Role)
         x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 
-        // ignore omitted parameters on models to enable optional params (e.g. User update)
+        // ignore omitted parameters on models to enable optional params (e.g. Player update)
         x.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
     });
     services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
     // configure DI for application services
-    services.AddScoped<IUserService, UserService>();
+    services.AddScoped<IPlayerService, PlayerService>();
+    services.AddScoped<ICourseService, CourseService>();
+    services.AddScoped<IScoreService, ScoreService>();
 }
 
 var app = builder.Build();
