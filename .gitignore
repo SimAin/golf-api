@@ -43,3 +43,7 @@ obj
 
 # local sqlite db that is auto generated
 LocalDatabase.db
+
+# vs code files
+.vscode
+.appsettings
