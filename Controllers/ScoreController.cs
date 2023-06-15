@@ -2,7 +2,7 @@
 
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-//using WebApi.Models.Scores;
+using WebApi.Models.Scores;
 using WebApi.Services;
 
 [ApiController]
@@ -34,12 +34,12 @@ public class ScoreController : ControllerBase
         return Ok(score);
     }
 
-    //[HttpPost]
-    //public IActionResult Create(CreateRequest model)
-    //{
-    //    _scoreService.Create(model);
-    //    return Ok(new { message = "Score created" });
-    //}
+    [HttpPost]
+    public IActionResult Create(CreateRequest model)
+    {
+        _scoreService.Create(model);
+        return Ok(new { message = "Score created" });
+    }
 
     //[HttpPut("{id}")]
     //public IActionResult Update(int id, UpdateRequest model)

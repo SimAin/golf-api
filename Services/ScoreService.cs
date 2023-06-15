@@ -4,13 +4,13 @@ using AutoMapper;
 using BCrypt.Net;
 using WebApi.Entities;
 using WebApi.Helpers;
-//using WebApi.Models.Scores;
+using WebApi.Models.Scores;
 
 public interface IScoreService
 {
     IEnumerable<Score> GetAll();
     Score GetById(int id);
-    //void Create(CreateRequest model);
+    void Create(CreateRequest model);
     //void Update(int id, UpdateRequest model);
     void Delete(int id);
 }
@@ -38,22 +38,20 @@ public class ScoreService : IScoreService
         return getScore(id);
     }
 
-    //public void Create(CreateRequest model)
-    //{
-    //    // validate
-    //    if (_context.Scores.Any(x => x.Email == model.Email))
-    //        throw new AppException("Score with the email '" + model.Email + "' already exists");
+    public void Create(CreateRequest model)
+    {
+        // validate
+        if (_context.score.Any(x => x.Scoreid == model.Scoreid))
+            throw new AppException("Score with the id '" + model.Scoreid + "' already exists");
 
-    //    // map model to new score object
-    //    var score = _mapper.Map<Score>(model);
+        // map model to new score object
+        var score = _mapper.Map<Score>(model);
 
-    //    // hash password
-    //    score.PasswordHash = BCrypt.HashPassword(model.Password);
 
-    //    // save score
-    //    _context.Scores.Add(score);
-    //    _context.SaveChanges();
-    //}
+        // save score
+        _context.score.Add(score);
+        _context.SaveChanges();
+    }
 
     //public void Update(int id, UpdateRequest model)
     //{
