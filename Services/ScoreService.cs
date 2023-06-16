@@ -40,13 +40,8 @@ public class ScoreService : IScoreService
 
     public void Create(CreateRequest model)
     {
-        // validate
-        if (_context.score.Any(x => x.Scoreid == model.Scoreid))
-            throw new AppException("Score with the id '" + model.Scoreid + "' already exists");
-
         // map model to new score object
         var score = _mapper.Map<Score>(model);
-
 
         // save score
         _context.score.Add(score);
