@@ -25,6 +25,17 @@ public class Course
     public int hole17_par { get; set; }
     public int hole18_par { get; set; }
 
+    public int front9_par { get { 
+                return hole1_par + hole2_par + hole3_par +
+                    hole4_par + hole5_par + hole6_par + 
+                    hole7_par + hole8_par + hole9_par; } }
+    public int back9_par { get { 
+                return hole10_par + hole11_par + hole12_par + 
+                    hole13_par + hole14_par + hole15_par +
+                    hole16_par + hole17_par + hole18_par; } }
+
+    public int total { get { return front9_par + back9_par; } }
+
     public List<Tuple<int, int>> getParList(){
         var scores = new List<Tuple<int, int>> ();
         scores.Add(Tuple.Create(1, hole1_par));

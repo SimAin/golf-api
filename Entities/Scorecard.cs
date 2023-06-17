@@ -2,10 +2,16 @@ namespace WebApi.Entities
 {
     public class Scorecard
     {
-       public Scorecard(string name, DateTime date, List<Tuple<int, int>> scores, List<Tuple<int, int>> pars){
+       public Scorecard(Course course, Score score, List<Tuple<int, int>> scores, List<Tuple<int, int>> pars){
 
-           courseName = name;
-           roundDate = date;
+           courseName = course.Name;
+           roundDate = score.date;
+           front9_total = score.front9_total;
+           back9_total = score.back9_total;
+           total = score.total;
+           front9ToPar = front9_total - course.front9_par;
+           back9ToPar = back9_total - course.back9_par;
+           totalToPar = total - course.total;
            results = new List<hole>();
            for (int i = 0; i < pars.Count; i++)
             {
@@ -23,6 +29,13 @@ namespace WebApi.Entities
         public DateTime roundDate { get; set;}
 
         public List<hole> results {get; set;}
+
+        public int front9_total { get; set; } 
+        public int back9_total { get; set; }
+        public int total { get; set; }
+        public int front9ToPar { get; set; } 
+        public int back9ToPar { get; set; }
+        public int totalToPar { get; set; }
 
     }
 }

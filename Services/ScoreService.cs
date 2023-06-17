@@ -10,6 +10,7 @@ public interface IScoreService
 {
     IEnumerable<Score> GetAll();
     Score GetById(int id);
+    IEnumerable<Score> GetByCourseId(int courseid);
     void Create(CreateRequest model);
     //void Update(int id, UpdateRequest model);
     void Delete(int id);
@@ -36,6 +37,11 @@ public class ScoreService : IScoreService
     public Score GetById(int id)
     {
         return getScore(id);
+    }
+
+    public IEnumerable<Score> GetByCourseId(int courseid)
+    {
+        return _context.score.Where(x=>x.Courseid == courseid);
     }
 
     public void Create(CreateRequest model)
