@@ -49,4 +49,29 @@ public class Score
                 return front9_total + back9_total; 
             }
     }
+
+    public List<Tuple<int, int>> getScoreList(){
+        var scores = new List<Tuple<int, int>> ();
+        scores.Add(Tuple.Create(1, hole1_score));
+        scores.Add(Tuple.Create(2, hole2_score));
+        scores.Add(Tuple.Create(3, hole3_score));
+        scores.Add(Tuple.Create(4, hole4_score));
+        scores.Add(Tuple.Create(5, hole5_score));
+        scores.Add(Tuple.Create(6, hole6_score));
+        scores.Add(Tuple.Create(7, hole7_score));
+        scores.Add(Tuple.Create(8, hole8_score));
+        scores.Add(Tuple.Create(9, hole9_score));
+        scores.Add(Tuple.Create(10, hole10_score));
+        scores.Add(Tuple.Create(11, hole11_score));
+        scores.Add(Tuple.Create(12, hole12_score));
+        scores.Add(Tuple.Create(13, hole13_score));
+        scores.Add(Tuple.Create(14, hole14_score));
+        scores.Add(Tuple.Create(15, hole15_score));
+        scores.Add(Tuple.Create(16, hole16_score));
+        scores.Add(Tuple.Create(17, hole17_score));
+        scores.Add(Tuple.Create(18, hole18_score));
+
+        return scores;
+
+    }
 }
