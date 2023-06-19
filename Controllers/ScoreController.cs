@@ -27,10 +27,10 @@ public class ScoreController : ControllerBase
         return Ok(scores);
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(int id)
+    [HttpGet("{scoreid}")]
+    public IActionResult GetById(int scoreid)
     {
-        var score = _scoreService.GetById(id);
+        var score = _scoreService.GetById(scoreid);
         return Ok(score);
     }
 
@@ -48,10 +48,10 @@ public class ScoreController : ControllerBase
     //    return Ok(new { message = "Score updated" });
     //}
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    [HttpDelete("{scoreid}")]
+    public IActionResult Delete(int scoreid)
     {
-        _scoreService.Delete(id);
+        _scoreService.Delete(scoreid);
         return Ok(new { message = "Score deleted" });
     }
 }

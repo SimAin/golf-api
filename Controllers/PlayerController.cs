@@ -27,10 +27,10 @@ public class PlayerController : ControllerBase
         return Ok(players);
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(int id)
+    [HttpGet("{playerid}")]
+    public IActionResult GetById(int playerid)
     {
-        var player = _playerService.GetById(id);
+        var player = _playerService.GetById(playerid);
         return Ok(player);
     }
 
@@ -48,10 +48,10 @@ public class PlayerController : ControllerBase
     //    return Ok(new { message = "Player updated" });
     //}
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    [HttpDelete("{playerid}")]
+    public IActionResult Delete(int playerid)
     {
-        _playerService.Delete(id);
+        _playerService.Delete(playerid);
         return Ok(new { message = "Player deleted" });
     }
 }

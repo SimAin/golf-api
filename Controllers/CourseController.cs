@@ -27,10 +27,10 @@ public class CourseController : ControllerBase
         return Ok(courses);
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(int id)
+    [HttpGet("{courseid}")]
+    public IActionResult GetById(int courseid)
     {
-        var course = _courseService.GetById(id);
+        var course = _courseService.GetById(courseid);
         return Ok(course);
     }
 
@@ -48,10 +48,10 @@ public class CourseController : ControllerBase
     //    return Ok(new { message = "Course updated" });
     //}
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    [HttpDelete("{courseid}")]
+    public IActionResult Delete(int courseid)
     {
-        _courseService.Delete(id);
+        _courseService.Delete(courseid);
         return Ok(new { message = "Course deleted" });
     }
 }
