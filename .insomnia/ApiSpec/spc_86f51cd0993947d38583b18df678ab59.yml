@@ -1,0 +1,359 @@
+_id: spc_86f51cd0993947d38583b18df678ab59
+type: ApiSpec
+parentId: wrk_c9fed02105e844e9926678d1925ef5d7
+modified: 1687196985934
+created: 1687196985934
+fileName: golf-api
+contents: |-
+  {
+    "openapi": "3.0.1",
+    "info": {
+      "title": "WebApi",
+      "version": "1.0"
+    },
+    "paths": {
+      "/Course": {
+        "get": {
+          "tags": [
+            "Course"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Course/{courseid}": {
+        "get": {
+          "tags": [
+            "Course"
+          ],
+          "parameters": [
+            {
+              "name": "courseid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Course"
+          ],
+          "parameters": [
+            {
+              "name": "courseid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Golf/scorecard/score/{scoreid}": {
+        "get": {
+          "tags": [
+            "Golf"
+          ],
+          "parameters": [
+            {
+              "name": "scoreid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Golf/scorecard/course/{courseid}": {
+        "get": {
+          "tags": [
+            "Golf"
+          ],
+          "parameters": [
+            {
+              "name": "courseid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Player": {
+        "get": {
+          "tags": [
+            "Player"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Player/{playerid}": {
+        "get": {
+          "tags": [
+            "Player"
+          ],
+          "parameters": [
+            {
+              "name": "playerid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Player"
+          ],
+          "parameters": [
+            {
+              "name": "playerid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Score": {
+        "get": {
+          "tags": [
+            "Score"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Score"
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRequest"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRequest"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/Score/{scoreid}": {
+        "get": {
+          "tags": [
+            "Score"
+          ],
+          "parameters": [
+            {
+              "name": "scoreid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Score"
+          ],
+          "parameters": [
+            {
+              "name": "scoreid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "CreateRequest": {
+          "required": [
+            "courseid",
+            "date",
+            "playerid"
+          ],
+          "type": "object",
+          "properties": {
+            "courseid": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "playerid": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "date": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "hole1_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole2_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole3_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole4_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole5_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole6_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole7_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole8_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole9_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole10_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole11_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole12_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole13_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole14_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole15_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole16_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole17_score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hole18_score": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+contentType: yaml

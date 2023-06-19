@@ -1,0 +1,21 @@
+_id: req_973b9498bb844daeb71268dadeaa9623
+type: Request
+parentId: wrk_c9fed02105e844e9926678d1925ef5d7
+modified: 1687196969832
+created: 1687196969832
+url: "{{ _.base_url }}/Score/{{ _.scoreid }}"
+name: /Score/{scoreid}
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1687196969832
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

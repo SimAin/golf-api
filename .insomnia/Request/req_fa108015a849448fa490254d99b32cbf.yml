@@ -1,0 +1,21 @@
+_id: req_fa108015a849448fa490254d99b32cbf
+type: Request
+parentId: wrk_c9fed02105e844e9926678d1925ef5d7
+modified: 1687196969826
+created: 1687196969826
+url: "{{ _.base_url }}/Course"
+name: /Course
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1687196969826
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

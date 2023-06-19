@@ -1,0 +1,21 @@
+_id: req_e772c28f3f384434ab9372874f300cd5
+type: Request
+parentId: wrk_c9fed02105e844e9926678d1925ef5d7
+modified: 1687196969829
+created: 1687196969829
+url: "{{ _.base_url }}/Player"
+name: /Player
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1687196969829
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

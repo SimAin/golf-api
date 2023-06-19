@@ -1,0 +1,24 @@
+_id: env_2f4b03828a054a4498bfa59d94f957b1
+type: Environment
+parentId: env_5ab0c4116f6740febd7a0954824d3c14
+modified: 1687197132796
+created: 1687196238497
+name: Local
+data:
+  scheme: http
+  host: localhost:4000
+  base_path: ""
+  playerid: "1"
+  courseid: "1"
+  scoreid: "5"
+dataPropertyOrder:
+  "&":
+    - scheme
+    - host
+    - base_path
+    - playerid
+    - courseid
+    - scoreid
+color: "#f232f5"
+isPrivate: false
+metaSortKey: 1687196238498
